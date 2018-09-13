@@ -130,6 +130,12 @@
   version = "v1.0"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/j-griffith/csi-connectors"
+  packages = ["logger"]
+  revision = "a618995c6a98b6e359d13ba9d3bfc59f5d785846"
+
+[[projects]]
   name = "github.com/json-iterator/go"
   packages = ["."]
   revision = "3353055b2a1a5ae1b6a8dfde887a524e7088f3a2"
@@ -140,6 +146,12 @@
   packages = ["."]
   revision = "59fac5042749a5afb9af70e813da1dd5474f0167"
   version = "1.0.1"
+
+[[projects]]
+  branch = "fibrechannel-csi-connector"
+  name = "github.com/mathu97/csi-connectors"
+  packages = ["fibrechannel"]
+  revision = "0461f37bae5b17e97983c852aa3dda39f141713b"
 
 [[projects]]
   name = "github.com/matttproud/golang_protobuf_extensions"
@@ -659,6 +671,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8b43ab8306203b049af581d7567bd62d58b438ad31ada07c05ab0398c721a0fd"
+  inputs-digest = "1bf118549868e0888d46121bff77981e92289d787fb38da9b0d6fab4f7c4f8db"
   solver-name = "gps-cdcl"
   solver-version = 1

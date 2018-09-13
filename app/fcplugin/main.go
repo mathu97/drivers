@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/mathu97/fibrechannel-kubernetes-csi-driver/pkg/fcDriver"
+	"github.com/kubernetes-csi/drivers/pkg/fc"
 
 	"github.com/spf13/cobra"
 	"os"
