@@ -2,9 +2,9 @@ package fc
 
 import (
 	"github.com/container-storage-interface/spec/lib/go/csi/v0"
+	"github.com/kubernetes-csi/drivers/pkg/csi-common"
 	"github.com/mathu97/csi-connectors/fibrechannel"
 	"golang.org/x/net/context"
-	"github.com/kubernetes-csi/drivers/pkg/csi-common"
 )
 
 type fcNodeServer struct {

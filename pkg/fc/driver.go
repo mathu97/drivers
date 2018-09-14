@@ -3,6 +3,7 @@ package fc
 import (
 	"github.com/container-storage-interface/spec/lib/go/csi/v0"
 	"github.com/golang/glog"
+	"github.com/kubernetes-csi/drivers/pkg/csi-common"
 )
 
 type CSIDriver struct {
@@ -50,11 +51,17 @@ func (d *CSIDriver) AddVolumeCapabilityAccessModes(vc []csi.VolumeCapability_Acc
 
 	for _, c := range vc {
 		glog.Infof("Enabling volume access mode: %v", c.String())
-		vca = append(vca, NewVolumeCapabilityAccessMode(c))
+		vca = append(vca, csicommon.NewVolumeCapabilityAccessMode(c))
 	}
 
 	d.vcCap = vca
 	return vca
+}
+
+func RunNodePublishServer(d *CSIDriver, ns csi.NodeServer, ids csi.IdentityServer) {
+	s := csicommon.NewNonBlockingGRPCServer()
+	s.Start(d.endpoint, ids, nil, ns)
+	s.Wait()
 }
 
 func NewNodeServer(d *CSIDriver) *fcNodeServer {

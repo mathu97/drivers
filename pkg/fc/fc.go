@@ -63,4 +63,3 @@ func getFCDiskMounter(req *csi.NodePublishVolumeRequest) *fibrechannel.FCMounter
 		TargetPath:   req.GetTargetPath(),
 	}
 }
-
