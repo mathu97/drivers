@@ -151,7 +151,7 @@
   branch = "fibrechannel-csi-connector"
   name = "github.com/mathu97/csi-connectors"
   packages = ["fibrechannel"]
-  revision = "0461f37bae5b17e97983c852aa3dda39f141713b"
+  revision = "00fe0f5c5f07b044efd88163033fd43670025e03"
 
 [[projects]]
   name = "github.com/matttproud/golang_protobuf_extensions"
